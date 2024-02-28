@@ -7,9 +7,6 @@ def post_new_user(body):
                          json=body,  # inserta el cuerpo de solicitud
                          headers=data.headers)  # inserta los encabezados
 
-response = post_new_user(data.user_body)
-print(response.status_code)
-print(response.json())
 
 def post_new_client_kit(name):
     if name is not None:
@@ -27,7 +24,4 @@ def post_new_client_kit(name):
                          json=name_json,
                          headers=headers)
 
-response = post_new_client_kit("kit de prueba")
-print(response.status_code)
-print(response.json())
 
